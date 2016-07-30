@@ -6,6 +6,7 @@ var s3 = require('s3');
 var bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({extended : true}));
 var fs = require('fs');
+var env = require('./serverVars.json');
 
 var client = s3.createClient({
   maxAsyncS3: 20,
@@ -14,8 +15,8 @@ var client = s3.createClient({
   multipartUploadThreshold: 20971520,
   multipartUploadSize: 15728640, 
   s3Options: {
-    accessKeyId: "",
-    secretAccessKey: "",
+    accessKeyId: env.AWS_S3_Access_Key,
+    secretAccessKey: env.AWS_S3_Secret_Key,
   },
 });
 
