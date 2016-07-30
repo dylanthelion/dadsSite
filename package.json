@@ -1,0 +1,11 @@
+{
+  "name": "dads_server",
+  "version": "1.0.0",
+  "description": "Node app for serving dads scholarship web pages",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "dylanthelion",
+  "license": "ISC"
+}
