@@ -48,7 +48,7 @@ ul.sf-menu li li:hover ul, ul.sf-menu li li.sfHover ul { left: 10em; top: 0; } /
 ul.inactive { display: none; }
 
 /* Navigation Bar - Add .sf-navbar to .sf-menu */
-div.content ul.sf-navbar { padding-left: 8px; height: 2.7em; padding-bottom: 2.7em; position: relative; }
+div.content ul.sf-navbar {  height: 2.7em; padding-bottom: 2.7em; position: relative; }
 ul.sf-navbar li { position: static; }
 ul.sf-navbar li ul { width: auto; }  /* IE6 Needs This! */
 ul.sf-navbar li li { position: relative; }
@@ -89,7 +89,7 @@ div.content { min-height: 900px; }
 -------------------------------------------------------------- */
 
 div.two-column .prompt { margin-bottom: 10px; text-indent: 20px; }
-ul { padding-left: 40px; }
+/*ul { padding-left: 40px; }*/
 div.two-column { width: auto; }
 
 
