@@ -42,6 +42,7 @@ div.two-column.wide div.content { width: 946px; float: left; }*/
 
 /* Header Bar and Follow Us Bar */
 div.header-bar { background: #D1E5EC; }
+
 div.header-bar ul li a { border-right: 1px solid #242424; color: #242424; } 
 div.header-bar ul li.last a { border-left: 1px solid #242424; } 
 div.header-bar ul li a:hover { color: #6FA33F; }
@@ -53,29 +54,25 @@ ul.sf-menu.follow-us ul { border-left: 1px solid #242424; border-right: 1px soli
 ul.sf-menu.follow-us ul li.rss ul { border-top: 1px solid #242424; }
 
 /* Single Column */
-div.single-column.normal div.content { width: 770px; margin: 0 10px; background:#DDFAC1; border-left: 1px solid #000; border-right: 1px solid #000; float: left; position: relative; }
-div.single-column.wide div.content { width: 926px; margin: 0 10px; background:#DDFAC1; border-left: 1px solid #000; border-right: 1px solid #000; float: left; position: relative; }
+
 div.single-column div.container-4.iframe div.content { border-left: none; border-right:none;}
 div.single-column div.top { width: 100%; float: left; position: relative; }
 div.single-column div.middle { padding: 10px; clear: both; }
 
-/* Two Column */
-div.two-column.normal div.middle { width: 100%; padding: 0; background: #fff; float: left; }
-div.two-column.wide div.middle { width: 100%; padding: 0; background: #fff; float: left; }
 
 /* Two Column Left Sidebar */
 div.two-column.left div.top { margin: 0 10px; position: relative;}
 div.two-column.left div.header { min-height: 50px;}
+/* Left nav background */
 div.two-column.left div.main { padding: 10px; margin: 0 0 0 -180px; border-left: 180px solid #D1E5EC; float: left; position: relative; /* [disabled]z-index: 10; */ }
-div.two-column.left div.sidebar { margin: 0; width: 15%; font-size: 11px; float: left; position: relative; z-index: 20; }
-div.two-column.left div.split-navigation { background: #bbbbbb; }
+/* let nav */
+div.two-column.left div.sidebar { margin: 0; width: 180px; font-size: 11px; float: left; position: relative; z-index: 20; }
 
 /* Two Column Right Sidebar */
 div.two-column.right div.top {  position: relative;}
 div.two-column.right div.header { min-height: 50px; }
 div.two-column.right div.main {   border-right: 180px solid #D1E5EC; float: right; position: relative; z-index: 10; }
 div.two-column.right div.sidebar { margin: 0; width: 15%; font-size: 11px; float: right; position: relative; z-index: 20; }
-div.two-column.right div.split-navigation { background: #bbbbbb; }
 
 /* Navigation
 -------------------------------------------------------------- */
@@ -84,16 +81,10 @@ div.two-column.right div.split-navigation { background: #bbbbbb; }
 .sf-menu a { border-right: 1px solid #2F4E57;  text-decoration: none;  }
 ul.sf-menu a, ul.sf-menu  { color: #B0B0B0; }
 ul.sf-menu li a {color:#2F4E57; }
-ul.sf-menu li li { background: #D1E5EC;}
-ul.sf-menu li li li { background: #D1E5EC; }
-ul.sf-menu li:hover, .sf-menu li.sfHover, .sf-menu a:focus, .sf-menu a:hover, .sf-menu a:active { text-decoration:none; background:url(images/navigation-sprite-right.png) no-repeat 100% 0;  }
-ul.sf-menu.follow-us li:hover, .sf-menu.follow-us li.sfHover, .sf-menu.follow-us a:focus, .sf-menu.follow-us a:hover, .sf-menu.follow-us a:active { background-image: none; }
 ul.sf-menu.follow-us li li a {border-bottom: none;}
 ul.sf-menu li li a {border-right:none; color:#242424; border-bottom:solid 1px #77B7CC;}
-ul.sf-menu li li a:hover {background:#DDFAC1; color:#242424;}
 
 /* Single Column */
-div.single-column div.navigation { width: 100%; padding-bottom: 1px; background:url(images/header-bar-middle.gif) repeat-x left bottom; float: left; position: relative; font-size: 11px !important; }
 div.single-column div.content.theme div.navigation {top: -28px;}
 div.single-column div.content.theme div.middle {top: -25px; position:relative;  }
 
@@ -104,25 +95,12 @@ div.two-column div.navigation ul li { padding: 0; }
 div.two-column div.navigation ul li a { padding: 7px 10px; background:url(images/side-nav-bg.png) repeat-x 0 0; color: #2F4E57; text-decoration: none; display: block; }
 div.two-column div.navigation ul li li a { background: #D1E5EC; color: #242424; border-bottom: 1px solid #77B7CC; font-weight: normal; }
 div.two-column.left div.navigation ul li li a:hover, div.two-column.left div.navigation ul li li.current a { background: #DDFAC1; color: #242424; }
-div.two-column.right div.navigation ul li li a:hover, div.two-column.right div.navigation ul li li.current a { background: #DDFAC1; color: #242424; }
 
-/* Split Navigation */
-div.two-column.right.split-nav div.navigation { margin: 0 10px !important; padding: 0 !important; height: 33px; background:url(images/header-bar-middle.gif) repeat-x left bottom !important; font-size: 11px;  }
-div.two-column.left.split-nav div.navigation {  padding: 0 !important; height: 33px; background:url(images/header-bar-middle.gif) repeat-x left bottom !important; font-size: 11px;  }
 
-/* Summary Styles */
-div.layout-2 li.when, div.layout-2 li.where, div.layout-2 li.planner, div.layout-2 li.capacity, div.layout-2 li.websites { margin: 0 0 10px; padding: 10px; background: url(images/summary-detail-bg.png) repeat-x; border: 1px solid #D1E5EC; }
-div.layout-1 li.when, div.layout-1 li.where, div.layout-1 li.planner, div.layout-1 li.capacity, div.layout-1 li.websites { margin: 0 0 10px; padding: 10px; background: url(images/summary-detail-bg.png) repeat-x; border: 1px solid #D1E5EC; }
-
-/* For buttons
--------------------------------------------------------------- */
-td.grButtonMid { background: #D1E5EC;}
-a.grButtonText { color: #2F4E57; }
-span.button { background: #D1E5EC;  }/* future 7.0 class do not delete */
-span.button a { color: #2F4E57; } /* future 7.0 class do not delete */
 
 /* Page/Tab Background Color
 -------------------------------------------------------------- */
 div.two-column.left.normal div.middle,
 div.two-column.left.wide div.middle, div.two-column.right.wide div.middle, div.middle div.two-column.right.normal div.middle, ul.sf-menu.sf-navbar li li.current,
+/* Two-column main background */
 ul.sf-menu.sf-navbar li li.current:hover { background-color: #DDFAC1; }

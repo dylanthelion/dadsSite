@@ -18,16 +18,18 @@
   <meta property="twitter:card" content="summary" />
   <script type="text/javascript" src="../scripts/jquery-3.1.0.min.js"></script>
     <script type="text/javascript" src="../scripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../scripts/addFormInput.js"></script>
     <link rel="stylesheet" type="text/css" href="../styles/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="../styles/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="../styles/bootsnipp.min.css">
+    <link rel="stylesheet" type="text/css" href="../styles/formPages.css">
     <script type="text/javascript" src="../scripts/jquery-ui-custom.min.js?version=10.0.14" ></script>
     <script type="text/javascript" src="../scripts/full-height.js?version=10.0.14"></script>
     <script type="text/javascript" src="../scripts/form-handler.js"></script>
 </head>
 <body>
     <div id="ctl00_container1" class="container-1 two-column left ff-verdana fs-large wide ">
-        <div class="header-bar clearfix" style="height : 25px;">
+        <div class="header-bar clearfix">
             <div class="container-7">
                 <ul>
                     <li class=""><a id="ctl00_hlRegisterButton" class="grButtonText" href="#">Scholarship registration</a></li>
@@ -44,7 +46,7 @@
                         <li id="ctl00_info" class="current">
                             <ul id="ctl00_blInfo">
                                 <li class="current"><a href="html/aboutUs.html">About Us</a></li>
-                                <li><a href="/events/16th-annual-bethesda-foundation-golf-tournament-sponsored-by-rbc-wealth-management/agenda-dc35bb44ce2c42b08ce3d521855431c7.aspx">Schedule of Events</a></li>
+                                <li><a href="#">Scholarship form</a></li>
                                 <li><a href="/events/16th-annual-bethesda-foundation-golf-tournament-sponsored-by-rbc-wealth-management/custom-17-dc35bb44ce2c42b08ce3d521855431c7.aspx">Registration Fees &amp; Sponsorship Opportunities</a></li><li><a href="/events/16th-annual-bethesda-foundation-golf-tournament-sponsored-by-rbc-wealth-management/custom-18-dc35bb44ce2c42b08ce3d521855431c7.aspx">Donate Raffle Items</a></li>
                                 <li><a href="/events/16th-annual-bethesda-foundation-golf-tournament-sponsored-by-rbc-wealth-management/location-dc35bb44ce2c42b08ce3d521855431c7.aspx">Oconomowoc Golf Club</a></li><li><a href="/events/16th-annual-bethesda-foundation-golf-tournament-sponsored-by-rbc-wealth-management/contactus-dc35bb44ce2c42b08ce3d521855431c7.aspx">Contact Us</a></li>
                             </ul>
@@ -56,6 +58,7 @@
     <div class='container'>
     <div class='row'>
         <div class='col-md-8'>
+            <h1>Scholarship Application</h1>
             <div class='well well-sm'>
                 <form>
                 <div class='row'>
@@ -63,7 +66,40 @@
                         <div class='form-group'>
                             <label for='name'>
                                 Name</label>
-                            <input type='text' class='form-control' id='name' placeholder='Enter name' required='required' name='Name' />
+                                <div class="container-columns">
+                                    <input type='text' class='form-control tri_column_input' id='firstName' placeholder='first' required='required' name='Name' />
+                                    <input type='text' class='form-control tri_column_input' id='middleName' placeholder='middle' required='required' name='Name' />
+                                    <input type='text' class='form-control tri_column_input' id='lastName' placeholder='last' required='required' name='Name' />
+                                </div>
+                        </div>
+                        <div class='form-group'>
+                            <label for='Ethnicity'>
+                                Ethnicity (optional)</label>
+                            <select id='subject' name='Ethnicity' class='form-control'>
+                                <option value='Not specified' selected=''>Choose One:</option>
+                                <option value='Native American'>Native American</option>
+                                <option value='Asian'>Asian</option>
+                                <option value='African-American'>African-American</option>
+                                <option value='White'>White</option>
+                                <option value='Hispanic'>Hispanic</option>
+                                <option value='Other'>Other</option>
+                            </select>
+                        </div>
+                        <div class='form-group multi_row'>
+                            <label for='Address'>
+                                Address</label>
+                            <input type='text' class='form-control' id='Address' placeholder='Street address' required='required' name='Address' />
+                            <input type='text' class='form-control' id='Address2' placeholder='Street address line 2' required='required' name='Address2' />
+                            <div class="container-columns">
+                                    <input type='text' class='form-control tri_column_input' id='City' placeholder='city' required='required' name='City' />
+                                    <input type='text' class='form-control tri_column_input' id='State' required='required' name='State' value="Wisconsin" disabled="disabled" />
+                                    <input type='text' class='form-control tri_column_input' id='ZipCode' placeholder='zip code' required='required' name='ZipCode' />
+                            </div>
+                        </div>
+                        <div class='form-group'>
+                            <label for='Phone'>
+                                Phone Number</label>
+                            <input type='text' class='form-control' id='Phone' placeholder='phone number' required='required' name='Phone' />
                         </div>
                         <div class='form-group'>
                             <label for='email'>
@@ -74,22 +110,87 @@
                                 <input type='email' class='form-control' id='email' placeholder='Enter email' required='required' name='Email' /></div>
                         </div>
                         <div class='form-group'>
-                            <label for='subject'>
-                                Subject</label>
-                            <select id='subject' name='Subject' class='form-control' required='required'>
-                                <option value='na' selected=''>Choose One:</option>
-                                <option value='service'>General Customer Service</option>
-                                <option value='suggestions'>Suggestions</option>
-                                <option value='product'>Product Support</option>
-                            </select>
+                            <label for='High_School'>
+                                Current High School</label>
+                            <input type='text' class='form-control' id='High_School' placeholder='name of high school' required='required' name='High_School' />
                         </div>
+                        <div class='form-group'>
+                            <label for='GPA'>
+                                Grade Point Average</label>
+                            <input type='text' class='form-control' id='GPA' placeholder='High School GPA' required='required' name='GPA' />
+                        </div>
+                        <div class='form-group'>
+                            <label for='ACT'>
+                                Standardized Test Scores</label>
+                            <br />
+                            <label for='ACT_Verbal'>
+                                ACT</label>
+                                <div class="container-columns">
+                                    <input type='text' class='form-control five_column_input' id='ACT_Verbal' placeholder='first' required='required' name='ACT_Verbal' />
+                                    <input type='text' class='form-control five_column_input' id='ACT_Math' placeholder='first' required='required' name='ACT_Math' />
+                                    <input type='text' class='form-control five_column_input' id='ACT_Reading' placeholder='first' required='required' name='ACT_Reading' />
+                                    <input type='text' class='form-control five_column_input' id='ACT_Science' placeholder='first' required='required' name='ACT_Science' />
+                                    <input type='text' class='form-control five_column_input' id='ACT_Total' placeholder='first' required='required' name='ACT_Total' />
+                                </div>
+                        </div>
+                        <div class='form-group'>
+                            <label for='SAT_Verbal'>
+                                SAT</label>
+                                <div class="container-columns">
+                                    <input type='text' class='form-control two_column_input' id='SAT_Verbal' placeholder='first' required='required' name='SAT_Verbal' />
+                                    <input type='text' class='form-control two_column_input' id='SAT_Math' placeholder='first' required='required' name='SAT_Math' />
+                                </div>
+                        </div>
+                        
                     </div>
                     <div class='col-md-6'>
-                        <div class='form-group'>
-                            <label for='name'>
-                                Message</label>
-                            <textarea name='message' id='message' class='form-control' rows='9' cols='25' required='required'
-                                placeholder='Message'></textarea>
+                        <div class='form-group multi_row'>
+                            <div class="variable_input_container" id="Awards">
+                                <label for='Awards1'>
+                                    Honors & Awards</label>
+                                <input type='text' class='form-control' id='Awards1' name='Awards1' />
+                                <input type='text' class='form-control' id='Awards2' name='Awards2' />
+                                <input type='text' class='form-control' id='Awards3' name='Awards3' />
+                            </div>
+                            <button class="add_input_button">More</button>
+                        </div>
+                        <div class='form-group multi_row'>
+                            <div class="variable_input_container" id="Colleges">
+                                <label for='Colleges1'>
+                                    Colleges Under Consideration</label>
+                                <input type='text' class='form-control' id='Colleges1' name='Colleges1' />
+                                <input type='text' class='form-control' id='Colleges2' name='Colleges2' />
+                                <input type='text' class='form-control' id='Colleges3' name='Colleges3' />
+                            </div>
+                            <button class="add_input_button">More</button>
+                        </div>
+                        <div class='form-group multi_row'>
+                            <div class="variable_input_container" id="Extracurriculars">
+                                <label for='Extracurriculars1'>
+                                    School Extracurricular Activities</label>
+                                <input type='text' class='form-control' id='Extracurriculars1' name='Extracurriculars1' />
+                                <input type='text' class='form-control' id='Extracurriculars2' name='Extracurriculars2' />
+                                <input type='text' class='form-control' id='Extracurriculars3' name='Extracurriculars3' />
+                            </div>
+                            <button class="add_input_button">More</button>
+                        </div>
+                        <div class='form-group multi_row'>
+                            <div class="variable_input_container" id="Volunteers">
+                                <label for='Extracurriculars1'>
+                                    Community and Volunteer Activities</label>
+                                <input type='text' class='form-control' id='Volunteers1' name='Volunteers1' />
+                                <input type='text' class='form-control' id='Volunteers2' name='Volunteers2' />
+                                <input type='text' class='form-control' id='Volunteers3' name='Volunteers3' />
+                            </div>
+                            <button class="add_input_button">More</button>
+                        </div>
+                        <div class='form-group multi_row'>
+                            <div class="variable_textArea_container" id="WorkHistory">
+                                <label for='WorkHistory1'>
+                                    Work History. Include a detailed description for each.</label>
+                                <textarea class='form-control' id='WorkHistory1' name='WorkHistory1' rows='7'></textArea>
+                            </div>
+                            <button class="add_textArea_button">More</button>
                         </div>
                     </div>
                     <div class='col-md-12'>
@@ -100,24 +201,128 @@
                 </form>
             </div>
         </div>
+        <div class='col-md-5'>
+            <div class='well well-sm'>
+                <form>
+                    <div class='row'>
+                    <div class='col-md-10'>
+                        <div class='form-group multi_row'>
+                            <label for='Athletic_Director_Name'>
+                                References (for verification; please fill these out)</label>
+                            <label for='Athletic_Director_Name'>Athletic Director</label>
+                            <input type='text' class='form-control' id='Athletic_Director_Name' placeholder='name' required='required' name='Athletic_Director_Name' />
+                            <input type='text' class='form-control' id='Athletic_Director_Phone' placeholder='phone' required='required' name='Athletic_Director_Phone' />
+                            <input type='text' class='form-control' id='Athletic_Director_Email' placeholder='email' required='required' name='Athletic_Director_Email' />
+                            <label for='Principal_Name'>Principal</label>
+                            <input type='text' class='form-control' id='Principal_Name' placeholder='name' required='required' name='Principal_Name' />
+                            <input type='text' class='form-control' id='Principal_Phone' placeholder='phone' required='required' name='Principal_Phone' />
+                            <input type='text' class='form-control' id='Principal_Email' placeholder='email' required='required' name='Principal_Email' />
+                        </div>
+                    </div>
+                </div>
+                </form>
+            </div>
+        </div>
+        <div class='col-md-5'>
+
+            <div class='well well-sm'>
+                <h2>Financial Information</h2>
+                <form>
+                    <div class='row'>
+                    <div class='col-md-10'>
+                        <div class='form-group multi_row'>
+                            <label for='Father_Name'>
+                                Family:</label>
+                            <label for='Father_Name'>Father</label>
+                            <input type='text' class='form-control' id='Father_Name' placeholder='name' name='Father_Name' />
+                            <input type='text' class='form-control' id='Father_Address' placeholder='street address' name='Father_Address' />
+                            <label for='Father_Employer'>Occupation</label>
+                            <input type='text' class='form-control' id='Father_Employer' placeholder='employer'  name='Father_Employer' />
+                            <input type='text' class='form-control' id='Father_Job' placeholder='occupation' required='required' name='Father_Job' />
+                            <input type='text' class='form-control' id='Father_Income' placeholder='annual income' required='required' name='Father_Income' />
+                            <label for='Mother_Name'>Mother</label>
+                            <input type='text' class='form-control' id='Mother_Name' placeholder='name' name='Mother_Name' />
+                            <input type='text' class='form-control' id='Mother_Address' placeholder='street address' name='Mother_Address' />
+                            <label for='Mother_Employer'>Occupation</label>
+                            <input type='text' class='form-control' id='Mother_Employer' placeholder='employer'  name='Mother_Employer' />
+                            <input type='text' class='form-control' id='Mother_Job' placeholder='occupation' required='required' name='Mother_Job' />
+                            <input type='text' class='form-control' id='Mother_Income' placeholder='annual income' required='required' name='Mother_Income' />
+                        </div>
+                        <div class='form-group multi_row'>
+                            <div class="variable_input_container" id="Income">
+                                <label for='Income1'>
+                                    Other Household Income Sources</label>
+                                <input type='text' class='form-control' id='Income1' name='Income1' />
+                            </div>
+                            <button class="add_input_button">More</button>
+                        </div>
+                        <div class='form-group'>
+                            <label for='Total_Income'>
+                                Total Household Income</label>
+                            <input type='text' class='form-control' id='Total_Income' placeholder='income' required='required' name='Total_Income' />
+                        </div>
+                        <div class='form-group'>
+                            <label for='Homeowner'>
+                                Does your family own their home?</label><br>
+                            <input type='radio' name='Homeowner' value="Yes" />Yes<br>
+                            <input type='radio' name='Homeowner' value="No" />No
+                        </div>
+                        <div class='form-group multi_row'>
+                            <div class="variable_input_container" id="Property">
+                                <label for='Property1'>
+                                    List any other properties here</label>
+                                <input type='text' class='form-control' id='Property1' name='Property1' />
+                            </div>
+                            <button class="add_input_button">More</button>
+                        </div>
+                        <div class='form-group multi_row'>
+                            <div class="variable_input_container" id="Sibling">
+                                <label for='Sibling1'>
+                                    Siblings (names and ages)</label>
+                                <input type='text' class='form-control' id='Sibling1' name='Sibling1' />
+                            </div>
+                            <button class="add_input_button">More</button>
+                        </div>
+                        <div class='form-group'>
+                            <label for='Children_In_College'>
+                                Number of Children in College</label>
+                            <input type='text' class='form-control' id='Children_In_College' required='required' name='Children_In_College' />
+                        </div>
+                        <div class='form-group'>
+                            <label for='Children_In_High_School'>
+                                Number of Children in High School</label>
+                            <input type='text' class='form-control' id='Children_In_High_School' name='Children_In_High_School' />
+                        </div>
+                        <div class='form-group'>
+                            <label for='Children_In_Grade_School'>
+                                Number of Children in K-8</label>
+                            <input type='text' class='form-control' id='Children_In_Grade_School' required='required' name='Children_In_Grade_School' />
+                        </div>
+                        <div class='form-group multi_row'>
+                            <div class="variable_textArea_container" id="Additional_Expense">
+                                <label class="question_label" for='Additional_Expense1'>
+                                    Are there any additional expenses (medical, etc...) that would make it difficult for your family to pay for a college education?</label>
+                                <textarea class='form-control' id='Additional_Expense1' name='Additional_Expense1' rows='7'></textArea>
+                            </div>
+                            <button class="add_textArea_button">More</button>
+                        </div>
+                    </div>
+                </div>
+                </form>
+            </div>
+        </div>
         <div class='col-md-4'>
             <form>
-            <legend><span class='glyphicon glyphicon-globe'></span>&nbsp;Our office</legend>
+            <legend><span class='glyphicon glyphicon-globe'></span>&nbsp;MPS Athletics Commissioner (for direct application)</legend>
             <address>
-                <strong>Twitter, Inc.</strong><br>
-                795 Folsom Ave, Suite 600<br>
-                San Francisco, CA 94107<br>
-                <abbr title='Phone'>
-                    P:</abbr>
-                (123) 456-7890
-            </address>
-            <address>
-                <strong>Full Name</strong><br>
-                <a href='mailto:#'>first.last@example.com</a>
-            </address>
+                <strong>Bill Molbeck</strong><br>
+                Commissioner of Athletics<br>
+                P.O. Box 461<br>
+                Milwaukee, WI 53201<br>
             </form>
         </div>
     </div>
+    
 </div>
 </div>
 </div>

@@ -1,0 +1,29 @@
+.tri_column_input {
+	width: 28%;
+	margin-right: 2px;
+	display: inline;
+}
+
+.container-columns {
+	display: block;
+}
+
+.multi_row input, .multi_row textarea {
+	margin-bottom: 5px;
+}
+
+.five_column_input {
+	width: 15%;
+	margin-right: 2px;
+	display: inline;
+}
+
+.two_column_input {
+	width: 40%;
+	margin-right: 2px;
+	display: inline;
+}
+
+.question_label {
+	font-size: 0.7em;
+}
