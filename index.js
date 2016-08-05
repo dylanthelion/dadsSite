@@ -8,6 +8,7 @@ app.use(bodyParser.urlencoded({extended : true}));
 var fs = require('fs');
 var env = require('./serverVars.json');
 var nodemailer = require('nodemailer');
+var htmlPath = "/public/html/";
 
 var transporter = nodemailer.createTransport({
     service:'Gmail',
@@ -31,6 +32,22 @@ var client = s3.createClient({
 
 app.get('/', function (req, res) {
    res.sendFile( __dirname + "/" + "index.html");
+})
+
+app.get('/aboutUs', function (req, res) {
+   res.sendFile( __dirname + htmlPath + "aboutUs.html");
+})
+
+app.get('/scholarshipApplication', function (req, res) {
+   res.sendFile( __dirname + htmlPath + "scholarship_form.html");
+})
+
+app.get('/golfRegistration', function (req, res) {
+   res.sendFile( __dirname + htmlPath + "golfRegistration.html");
+})
+
+app.get('/recipients', function (req, res) {
+   res.sendFile( __dirname + htmlPath + "recipients.html");
 })
 
 app.post('/sendScholarshipForm', function(req, res) {
