@@ -95,7 +95,7 @@ app.post('/createGolfRegistrant', function(req, res) {
 		 
 		  s3Params: {
 		    Bucket: env.S3_bucket,
-		    Key: "golf_registrants.json",
+		    Key: env.registrants_file,
 		  },
 		};
 
