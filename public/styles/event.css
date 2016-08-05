@@ -34,7 +34,7 @@ a:hover { text-decoration: none; }
 /* Layout
 -------------------------------------------------------------- */
 
-div.wide div.main { width: 726px; }
+div.wide div.main { width: 90%; }
 /*div.wide div.container-4 { background: url(images/container-4-wide-bg.png) repeat-y -1px 0; }
 div.wide div.container-4.iframe { background: none }
 div.two-column.normal div.content { width: 790px; float: left; }
