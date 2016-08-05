@@ -27,3 +27,7 @@
 .question_label {
 	font-size: 0.7em;
 }
+
+.form-container {
+	overflow: auto;
+}
