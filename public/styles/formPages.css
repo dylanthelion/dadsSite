@@ -31,3 +31,11 @@
 .form-container {
 	overflow: auto;
 }
+
+.input-next-line {
+	clear : left;
+}
+
+.input-single-char {
+	width: 4em;
+}
