@@ -82,6 +82,36 @@ app.post('/sendScholarshipForm', function(req, res) {
 	});
 })
 
+app.post('/createGolfRegistrant', function(req, res) {
+
+	var configFile = fs.readFileSync('registrants.json');
+	var config = JSON.parse(configFile);
+	config.push(req.body);
+	var configJSON = JSON.stringify(config, null, 4);
+	fs.writeFileSync('registrants.json', configJSON);
+
+	var params = {
+		  localFile: 'registrants.json',
+		 
+		  s3Params: {
+		    Bucket: env.S3_bucket,
+		    Key: "golf_registrants.json",
+		  },
+		};
+
+		var uploader = client.uploadFile(params);
+		uploader.on('error', function(err) {
+			console.error("unable to upload:", err.stack);
+		});
+		uploader.on('progress', function() {
+			console.log("progress", uploader.progressMd5Amount,
+			            uploader.progressAmount, uploader.progressTotal);
+		});
+		uploader.on('end', function() {
+			console.log("done uploading");
+		});
+})
+
 function deleteFile(fullPath) {
 	fs.unlink(fullPath, function(err) {
 	   if (err) {

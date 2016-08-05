@@ -10,6 +10,8 @@
   "license": "ISC",
   "dependencies": {
     "aws-sdk": "2.x",
-    "express": "4.x"
+    "express": "4.x",
+    "jsonfile": "^2.3.1",
+    "node-localdb": "0.0.3"
   }
 }

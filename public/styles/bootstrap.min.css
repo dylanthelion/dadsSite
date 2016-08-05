@@ -7008,7 +7008,6 @@ button.close {
 .form-horizontal .form-group:after, .modal-footer:after, .nav:after,
 .navbar-collapse:after, .navbar-header:after, .navbar:after, .pager:after,
 .panel-body:after, .row:after {
-    clear: both
 }
 
 .center-block {
