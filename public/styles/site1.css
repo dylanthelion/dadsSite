@@ -3,170 +3,33 @@
 /* Typography
 -------------------------------------------------------------- */
 html { font-size: 100.01%; }
-body { font-size: 62.5%; } /* sets default browser font size to 10px */
-th { text-align: left; }
-em { font-style: italic; }
-td.grButtonMid a { padding: 10px; text-decoration: none; }
-h2.section-header { clear: both; }
-
-/* font-size Settings */
-div.container-1.fs-small { font-size: 110%; } /* 11px */
-div.container-1.fs-medium { font-size: 120%; } /* 12px */
+body { font-size: 62.5%; }
 div.container-1.fs-large { font-size: 130%; } /* 13px */
 
 /* Font-Family Settings */
-div.container-1.ff-arial { font-family: Arial, Helvetica, sans-serif; }
-div.container-1.ff-geneva { font-family: Geneva, Tahoma, "Nimbus Sans L", sans-serif; }
-div.container-1.ff-georgia { font-family: Georgia, "Times New Roman", Times, serif; }
-div.container-1.ff-helvetica { font-family: Helvetica, Arial, FreeSans, sans-serif; }
-div.container-1.ff-lucida { font-family: "Lucida Grande", Helvetica, Verdana, sans-serif; }
-div.container-1.ff-palatino { font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif; }
-div.container-1.ff-tahoma { font-family: Tahoma, Geneveea, sans-serif; }
-div.container-1.ff-trebuchet { font-family: "Trebuchet MS", Arial, Helvetica, sans-serif; }
 div.container-1.ff-verdana { font-family: Verdana, Geneva, sans-serif; }
 
-/* Structural Defaults
--------------------------------------------------------------- */
-div.top { z-index: 1000; }
-div.invitation { z-index: 1001; }
-div.container-2 { position: relative; z-index: 490; }
-div.two-column div.main { z-index: auto !important; }
-div.middle { position: relative; }
 
-div.split-nav div.navigation {overflow:hidden;}
-
-/*Navigation Bar Updates with Custom Header Image (PROD-13474) - Test thoroughly*/
-.cvt-standard div.content.custom-image-header div.navigation ul.sf-menu.sf-navbar { height: auto; } /* prod-14781 */
-.cvt-standard div.content.custom-image-header div.navigation ul.sf-menu.sf-navbar li ul {margin:2px 0 0 0; padding:0 0 0 10px;}
-.cvt-standard div.content.custom-image-header div.navigation.nav-multiple-tabs ul.sf-menu li ul {top:2.7em;}
-.cvt-standard div.content.custom-image-header div.navigation ul.sf-menu li ul {top:0;}
-.cvt-standard div.content.custom-image-header div.navigation {top:-10px;}
-.cvt-standard div.single-column div.content.custom-image-header .header img {margin:0 0 10px 0;}
-.cvt-standard div.single-column.subnav div.content.custom-image-header div.navigation{top:-2px;}
-.cvt-standard div.single-column.subnav  div.navigation.nav-single-tab ul.sf-menu > li, div.single-column.subnav  div.navigation.nav-single-tab ul.sf-menu > li{border:0;} /* prod-13400: top + single tabbed + default header image */
-.cvt-standard div.single-column.dropdown div.navigation ul.sf-menu li:hover ul, div.single-column.dropdown div.navigation ul.sf-menu li.sfHover ul{top:2.6em;}
-
-
-
-/* Custom Pages
--------------------------------------------------------------- */
-div.content { min-height: 900px; }
-
-
-
-/* Registration
--------------------------------------------------------------- */
-.FormErrTxt {color:red}
-
-
-
-/* Scrollable Div
---------------------------------------------------------------*/
-#container { position: relative; }
-
-
-
-
-
-/*Header image fix - 2/20/2011 */
-div.normal div.header img { max-width: 770px;}
-div.wide div.header img { max-width: 926px; }
-
-/* Header Bar
--------------------------------------------------------------- */
-div.container-7 { position: relative; z-index: 500; }
-/* Header bar */
-div.wide div.header-bar div.container-7 { width: 100%; margin: 0 auto; }
-/* Header bar container */
-div.header-bar { width: 100%; z-index: 500; position: relative; background: #000; }
+/* Header bar buttons */
 div.header-bar ul li { float: right; list-style: none; }
 div.header-bar ul li a { height: 25px; padding: 8px 21px 8px 15px; display: block; color: #fff; text-decoration: none; }
-div.normal div.header-bar li.select ul, div.wide div.header-bar li.select ul { float: left; }
-div.normal div.header-bar ul { margin: 0 auto;}
-div.wide div.header-bar ul { margin: 0 auto; }
 div.header-bar a.grButtonText { font-weight: bold; line-height: 1.3em; }
 div.header-bar { font-size: 11px; }
-
-/*Title Text Alignment Styles*/
-div.two-column div.header { position: relative; }
-div.header-inner { position: absolute; }
-
-/*top left*/
-div.top-left div.header-inner { top: 0; left: 10px; }
-
-/*top center*/
-div.top-center div.header-inner { top: 0; left: 50%; }
-div.top-center div.header-inner h1 { position: relative; right: 50%; }
-
-/*top right*/
-div.top-right div.header-inner { top: 0; right: 10px; }
-
-/*middle left*/
-div.middle-left div.header-inner { top: 50%; left: 10px; }
-div.middle-left div.header-inner h1 { position: relative; bottom: 0.5em; }
-
-/*middle center*/
-div.middle-center div.header-inner { top: 50%; left: 50%; }
-div.middle-center div.header-inner h1 { position: relative; bottom: 0.5em; right: 50%; }
-
-/*middle right*/
-div.middle-right div.header-inner { top: 50%; right: 10px; }
-div.middle-right div.header-inner h1 { position: relative; bottom: 0.5em; }
-
-/*bottm left*/
-div.bottom-left div.header-inner { bottom: 0; left: 10px; }
-
-/*bottm center*/
-div.bottom-center div.header-inner { bottom: 0; left: 50%; }
-div.bottom-center div.header-inner h1 { position: relative; right: 50%; }
-
-/*bottom right*/
-div.bottom-right div.header-inner { bottom: 0; right: 10px; }
-
-/*single-column bottm left (default header)*/
-.single-column div.content.theme div.bottom-left div.header-inner { bottom: 25px; left: 10px; }
-.single-column div.content.theme div.bottom-left div.header-inner h1 { margin-bottom: 0; top: 0; }
-
-/*single-column bottm center (default header)*/
-.single-column div.content.theme div.bottom-center div.header-inner { bottom: 25px; left: 50%; }
-.single-column div.content.theme div.bottom-center div.header-inner h1 { position: relative; right: 50%; margin-bottom: 0; top: 0; }
-
-/*single-column bottom right (default header)*/
-.single-column div.content.theme div.bottom-right div.header-inner { bottom: 25px; right: 10px; }
-.single-column div.content.theme div.bottom-right div.header-inner h1 { margin-bottom: 0; top: 0; }
-
-/*single-column bottm left (custom/no header)*/
-.single-column div.bottom-left div.header-inner { bottom: 45px; left: 10px; }
-.single-column div.bottom-left div.header-inner h1 { position: relative; top: 1.75em; }
-
-/*single-column bottm center (custom/no header)*/
-.single-column div.bottom-center div.header-inner { bottom: 25px; left: 50%; }
-.single-column div.bottom-center div.header-inner h1 { position: relative; right: 50%; top: 1.75em; }
-
-/*single-column bottom right (custom/no header)*/
-.single-column div.bottom-right div.header-inner { bottom: 45px; right: 10px; }
-.single-column div.bottom-right div.header-inner h1 { position: relative; top: 1.75em; }
-
-/*Follow Us Bar Styles 7.1*/
-/*** ESSENTIAL STYLES ***/
-div.header-bar ul.sf-menu.follow-us li a { height: auto;}
+/* Header bar margin */
+div.wide div.header-bar ul { margin: 0 auto; }
 
 
 /*  9.0 cvent footer style */
-.cvent-footer-wrapper{text-align:center; padding:10px 0; font-family:Arial, Verdana,Helvetica,sans-serif;}
-.cvent-footer-wrapper p {margin:0; padding:0;}
-.cvent-footer-wrapper span{padding:0 2px;}
-.cvent-footer-wrapper img.cvent-logo{width:124px; height:35px; margin-bottom:10px; background: #fff; padding: 2px 8px; border-radius: 5px;}
-.cvent-footer-wrapper ul, .cvent-footer-wrapper li{list-style:none; margin:0; padding:0;}
-.cvent-footer-wrapper li{display:inline;}
-.cvent-footer-wrapper li a{text-decoration:none;}
-.cvent-footer-wrapper li a:hover{text-decoration:underline;}
-.custom-footer .cvent-footer-wrapper ul, .custom-footer .cvent-footer-wrapper ul li{list-style:disc;}
-.custom-footer .cvent-footer-wrapper ul li {display:list-item; font-family:Verdana;}
-.custom-footer .cvent-footer-wrapper ul{padding-left:40px;}
-
-.cvent-footer-eula{text-align:center; padding:10px 0; font-family:Arial, Verdana,Helvetica,sans-serif;}
-.cvent-footer-eula{text-decoration:none;}
-.cvent-footer-eula:hover{text-decoration:underline;}
+.footer-wrapper{text-align:center; padding:10px 0; font-family:Arial, Verdana,Helvetica,sans-serif;}
+.footer-wrapper p {margin:0; padding:0;}
+.footer-wrapper span{padding:0 2px;}
+.footer-wrapper img.logo{width:124px; height:35px; margin-bottom:10px; background: #fff; padding: 2px 8px; border-radius: 5px;}
+.footer-wrapper ul, .footer-wrapper li{list-style:none; margin:0; padding:0;}
+.footer-wrapper li{display:inline;}
+.footer-wrapper li a{text-decoration:none;}
+.footer-wrapper li a:hover{text-decoration:underline;}
+.custom-footer .footer-wrapper ul, .custom-footer .footer-wrapper ul li{list-style:disc;}
+.custom-footer .footer-wrapper ul li {display:list-item; font-family:Verdana;}
+.custom-footer .footer-wrapper ul{padding-left:40px;}
 
 

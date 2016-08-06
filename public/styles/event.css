@@ -4,103 +4,46 @@ Name: Golf
 */
 
 html { height: 100%; }
-body { height: 100%; background:url("../assets/page-bg.png") #F1ECE6; }
-div.container-1 { min-width: 950px; width: 100%; }
+body { height: 100%; background:url("../assets/page-bg.png") #F1ECE6; width: 100%;}
 
 /* Typography
 -------------------------------------------------------------- */
 /* Headings */
-h1 img, h2 img, h3 img, h4 img, h5 img, h6 img { margin: 0; }
-div.single-column h1 { margin-bottom: 10px; font-size: 1.8em; text-align: center; clear: both; font-weight:bold; color: #304712; }
 div.two-column h1 { margin-bottom: 10px; width: 100%; font-size: 1.8em; text-align: left; clear: both; font-weight:bold; color: #304712; }
-h2.section-header { margin-bottom: 10px; height: 31px; background: url(/g/css/common/images/section-header-sprite-right.png) no-repeat 100% -800px; font-size: 1.1em; font-weight: bold; color: #627945; }
-h2.section-header span { padding: 7px 0 7px 6px; height: 26px; background: url(/g/css/common/images/section-header-sprite-left.png) no-repeat 0 -800px; text-indent: 5px; display: block; width: 96.5%; }
 h1 { color: #304712; }
 h2 { font-weight: bold; font-size: 1.2em; }
-h3 { font-size: 1em; font-weight: bold; margin-bottom: 1em; }
-h4 { font-size: 1.15em; line-height: 1.25; margin-bottom: 1.25em; }
-h5 { font-size: 1em; font-weight: bold; margin-bottom: 1.5em; }
-h6 { font-size: 1em; font-weight: bold; }
 
-/* Text elements */
-p { line-height: 1.5em; margin-top: 15px; }
-p img.left  { float: left; margin: 1.5em 1.5em 1.5em 0; padding: 0; }
-p img.right { float: right; margin: 1.5em 0 1.5em 1.5em; }
-
-/* Hyperlinks */
-a { color: #242424; text-decoration: underline: }
-a:hover { text-decoration: none; }
-
-/* Layout
--------------------------------------------------------------- */
 
 div.wide div.main { width: 90%; }
-/*div.wide div.container-4 { background: url(images/container-4-wide-bg.png) repeat-y -1px 0; }
-div.wide div.container-4.iframe { background: none }
-div.two-column.normal div.content { width: 790px; float: left; }
-div.two-column.wide div.content { width: 946px; float: left; }*/
 
 /* Header Bar and Follow Us Bar */
 div.header-bar { background: #D1E5EC; }
 
+/* Header bar buttons */
 div.header-bar ul li a { border-right: 1px solid #242424; color: #242424; } 
 div.header-bar ul li.last a { border-left: 1px solid #242424; } 
 div.header-bar ul li a:hover { color: #6FA33F; }
-div.single-column div.header { width: 100%; min-height: 50px; position: relative; }
-div.two-column.normal div.top { border-bottom: 1px solid #343434;}
-div.two-column.wide div.top { border-bottom: 1px solid #343434;}
-ul.sf-menu.follow-us { border-left: 1px solid #242424; }
-ul.sf-menu.follow-us ul { border-left: 1px solid #242424; border-right: 1px solid #242424; border-bottom: 1px solid #242424; }
-ul.sf-menu.follow-us ul li.rss ul { border-top: 1px solid #242424; }
-
-/* Single Column */
-
-div.single-column div.container-4.iframe div.content { border-left: none; border-right:none;}
-div.single-column div.top { width: 100%; float: left; position: relative; }
-div.single-column div.middle { padding: 10px; clear: both; }
 
 
-/* Two Column Left Sidebar */
-div.two-column.left div.top { margin: 0 10px; position: relative;}
-div.two-column.left div.header { min-height: 50px;}
 /* Left nav background */
-div.two-column.left div.main { padding: 10px; margin: 0 0 0 -180px; border-left: 180px solid #D1E5EC; float: left; position: relative; /* [disabled]z-index: 10; */ }
-/* let nav */
+div.two-column.left div.main { padding: 10px; margin: 0 0 0 -180px; border-left: 180px solid #D1E5EC; float: left; position: relative; }
+/* left nav */
 div.two-column.left div.sidebar { margin: 0; width: 180px; font-size: 11px; float: left; position: relative; z-index: 20; }
-
-/* Two Column Right Sidebar */
-div.two-column.right div.top {  position: relative;}
-div.two-column.right div.header { min-height: 50px; }
-div.two-column.right div.main {   border-right: 180px solid #D1E5EC; float: right; position: relative; z-index: 10; }
-div.two-column.right div.sidebar { margin: 0; width: 15%; font-size: 11px; float: right; position: relative; z-index: 20; }
-
-/* Navigation
--------------------------------------------------------------- */
-
-.sf-menu { width: 100%; float: left; line-height:inherit; }
-.sf-menu a { border-right: 1px solid #2F4E57;  text-decoration: none;  }
-ul.sf-menu a, ul.sf-menu  { color: #B0B0B0; }
-ul.sf-menu li a {color:#2F4E57; }
-ul.sf-menu.follow-us li li a {border-bottom: none;}
-ul.sf-menu li li a {border-right:none; color:#242424; border-bottom:solid 1px #77B7CC;}
-
-/* Single Column */
-div.single-column div.content.theme div.navigation {top: -28px;}
-div.single-column div.content.theme div.middle {top: -25px; position:relative;  }
-
-/* Two Column Sidebar */
 div.two-column div.navigation ul { list-style-type: none; padding:0; }
-div.two-column div.navigation ul li { padding: 0; }
+
 /* Left navbar items */
 div.two-column div.navigation ul li a { padding: 7px 10px; background:url(images/side-nav-bg.png) repeat-x 0 0; color: #2F4E57; text-decoration: none; display: block; }
 div.two-column div.navigation ul li li a { background: #D1E5EC; color: #242424; border-bottom: 1px solid #77B7CC; font-weight: normal; }
 div.two-column.left div.navigation ul li li a:hover, div.two-column.left div.navigation ul li li.current a { background: #DDFAC1; color: #242424; }
 
 
-
-/* Page/Tab Background Color
--------------------------------------------------------------- */
-div.two-column.left.normal div.middle,
-div.two-column.left.wide div.middle, div.two-column.right.wide div.middle, div.middle div.two-column.right.normal div.middle, ul.sf-menu.sf-navbar li li.current,
 /* Two-column main background */
-ul.sf-menu.sf-navbar li li.current:hover { background-color: #DDFAC1; }
+div.two-column.left.wide div.middle,  ul.sf-menu.sf-navbar li li.current:hover { background-color: #DDFAC1; }
+.clearfix:after, .container:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+  overflow:hidden;
+}

@@ -1,6 +1,6 @@
 $(document).ready(function(event) {
 	console.log('Form working');
-	$('#btnContactUs').click(function(event) {
+	$('#btnSubmit').click(function(event) {
 		event.preventDefault();
 		var isValid = true;
 		// Validation
