@@ -68,7 +68,7 @@
     <div class='container'>
     <div class='row'>
         <div class='col-md-8'>
-            <h1>Scholarship Application</h1>
+            <h1>Scholarship Application (Required fields : *)</h1>
             <!-- Forst form -->
             <div class='well well-sm'>
                 <form>
@@ -77,11 +77,11 @@
                     <div class='col-md-6'>
                         <div class='form-group'>
                             <label for='name'>
-                                Name</label>
+                                Name*</label>
                                 <div class="container-columns">
-                                    <input type='text' class='form-control tri_column_input' id='firstName' placeholder='first' required='required' name='Name' />
-                                    <input type='text' class='form-control tri_column_input' id='middleName' placeholder='middle' required='required' name='Name' />
-                                    <input type='text' class='form-control tri_column_input' id='lastName' placeholder='last' required='required' name='Name' />
+                                    <input type='text' class='form-control tri_column_input required_input' id='firstName' placeholder='first' name='Name' />
+                                    <input type='text' class='form-control tri_column_input required_input' id='middleName' placeholder='middle' name='Name' />
+                                    <input type='text' class='form-control tri_column_input required_input' id='lastName' placeholder='last' name='Name' />
                                 </div>
                         </div>
                         <div class='form-group'>
@@ -99,58 +99,62 @@
                         </div>
                         <div class='form-group multi_row'>
                             <label for='Address'>
-                                Address</label>
-                            <input type='text' class='form-control' id='Address' placeholder='Street address' required='required' name='Address' />
-                            <input type='text' class='form-control' id='Address2' placeholder='Street address line 2' required='required' name='Address2' />
+                                Address*</label>
+                            <input type='text' class='form-control required_input' id='Address' placeholder='Street address' name='Address' />
+                            <input type='text' class='form-control' id='Address2' placeholder='Street address line 2' name='Address2' />
                             <div class="container-columns">
-                                    <input type='text' class='form-control tri_column_input' id='City' placeholder='city' required='required' name='City' />
-                                    <input type='text' class='form-control tri_column_input' id='State' required='required' name='State' value="Wisconsin" disabled="disabled" />
-                                    <input type='text' class='form-control tri_column_input' id='ZipCode' placeholder='zip code' required='required' name='ZipCode' />
+                                    <input type='text' class='form-control tri_column_input required_input' id='City' placeholder='city' name='City' />
+                                    <input type='text' class='form-control tri_column_input required_input' id='State' name='State' value="Wisconsin" disabled="disabled" />
+                                    <input type='text' class='form-control tri_column_input int_input required_input' id='ZipCode' placeholder='zip code' name='ZipCode' />
                             </div>
                         </div>
-                        <div class='form-group'>
-                            <label for='Phone'>
-                                Phone Number</label>
-                            <input type='text' class='form-control' id='Phone' placeholder='phone number' required='required' name='Phone' />
-                        </div>
+                        <div class='form-group input-next-line'>
+                              <label for='areaCode'>Phone*</label>
+                              <div class="container-columns">
+                                    (<input type='text' class='form-control areaCodeInput required_input' placeholder='999' name='areaCode' maxLength='3' size='3' />)
+                                    <input type='text' class='form-control areaCodeInput required_input' name='phoneFirst'
+                                    placeholder='999' maxLength='3' size='3' />-
+                                    <input type='text' class='form-control phoneInput required_input' placeholder='9999' name='phoneSecond' maxLength='4' size='4' />
+                              </div>
+                            </div>
                         <div class='form-group'>
                             <label for='email'>
-                                Email Address</label>
+                                Email Address*</label>
                             <div class='input-group'>
                                 <span class='input-group-addon'><span class='glyphicon glyphicon-envelope'></span>
                                 </span>
-                                <input type='email' class='form-control' id='email' placeholder='Enter email' required='required' name='Email' /></div>
+                                <input type='email' class='form-control email_input required_input' placeholder='Enter email' name='Email' /></div>
                         </div>
                         <div class='form-group'>
                             <label for='High_School'>
-                                Current High School</label>
-                            <input type='text' class='form-control' id='High_School' placeholder='name of high school' required='required' name='High_School' />
+                                Current High School*</label>
+                            <input type='text' class='form-control required_input' id='High_School' placeholder='name of high school' name='High_School' />
                         </div>
                         <div class='form-group'>
                             <label for='GPA'>
-                                Grade Point Average</label>
-                            <input type='text' class='form-control' id='GPA' placeholder='High School GPA' required='required' name='GPA' />
+                                Grade Point Average*</label>
+                            <input type='text' class='form-control double_input required_input' id='GPA' placeholder='High School GPA' name='GPA' />
                         </div>
                         <div class='form-group'>
                             <label for='ACT'>
                                 Standardized Test Scores</label>
                             <br />
                             <label for='ACT_Verbal'>
-                                ACT</label>
+                                ACT (enter '0' for sections you haven't taken)</label>
                                 <div class="container-columns">
-                                    <input type='text' class='form-control five_column_input' id='ACT_Verbal' placeholder='first' required='required' name='ACT_Verbal' />
-                                    <input type='text' class='form-control five_column_input' id='ACT_Math' placeholder='first' required='required' name='ACT_Math' />
-                                    <input type='text' class='form-control five_column_input' id='ACT_Reading' placeholder='first' required='required' name='ACT_Reading' />
-                                    <input type='text' class='form-control five_column_input' id='ACT_Science' placeholder='first' required='required' name='ACT_Science' />
-                                    <input type='text' class='form-control five_column_input' id='ACT_Total' placeholder='first' required='required' name='ACT_Total' />
+                                    <input type='text' class='form-control five_column_input double_input required_input' placeholder='Vocab' id='ACT_Verbal' name='ACT_Verbal' />
+                                    <input type='text' class='form-control five_column_input double_input required_input' placeholder='Math' id='ACT_Math' name='ACT_Math' />
+                                    <input type='text' class='form-control five_column_input double_input required_input' id='ACT_Reading' placeholder='Read' name='ACT_Reading' />
+                                    <input type='text' class='form-control five_column_input double_input required_input' id='ACT_Science' placeholder='Sci' name='ACT_Science' />
+                                    <input type='text' class='form-control five_column_input double_input required_input' id='ACT_Total' placeholder='Total' name='ACT_Total' />
                                 </div>
                         </div>
                         <div class='form-group'>
                             <label for='SAT_Verbal'>
-                                SAT</label>
+                                SAT (enter '0' for sections you haven't taken)</label>
                                 <div class="container-columns">
-                                    <input type='text' class='form-control two_column_input' id='SAT_Verbal' placeholder='first' required='required' name='SAT_Verbal' />
-                                    <input type='text' class='form-control two_column_input' id='SAT_Math' placeholder='first' required='required' name='SAT_Math' />
+                                    <input type='text' class='form-control int_input two_column_input required_input' id='SAT_Verbal' placeholder='Verbal' name='SAT_Verbal' />
+                                    <input type='text' class='form-control two_column_input int_input required_input' id='SAT_Math' placeholder='Math' name='SAT_Math' />
                                 </div>
                         </div>
                         
@@ -224,14 +228,24 @@
                         <div class='form-group multi_row'>
                             <label for='Athletic_Director_Name'>
                                 References (for verification; please fill these out)</label>
-                            <label for='Athletic_Director_Name'>Athletic Director</label>
-                            <input type='text' class='form-control' id='Athletic_Director_Name' placeholder='name' required='required' name='Athletic_Director_Name' />
-                            <input type='text' class='form-control' id='Athletic_Director_Phone' placeholder='phone' required='required' name='Athletic_Director_Phone' />
-                            <input type='text' class='form-control' id='Athletic_Director_Email' placeholder='email' required='required' name='Athletic_Director_Email' />
-                            <label for='Principal_Name'>Principal</label>
-                            <input type='text' class='form-control' id='Principal_Name' placeholder='name' required='required' name='Principal_Name' />
-                            <input type='text' class='form-control' id='Principal_Phone' placeholder='phone' required='required' name='Principal_Phone' />
-                            <input type='text' class='form-control' id='Principal_Email' placeholder='email' required='required' name='Principal_Email' />
+                            <label for='Athletic_Director_Name'>*Athletic Director</label>
+                            <input type='text' class='form-control required_input' id='Athletic_Director_Name' placeholder='name' name='Athletic_Director_Name' />
+                            <div class="container-columns">
+                                (<input type='text' class='form-control areaCodeInput required_input' placeholder='999' name='areaCode' maxLength='3' size='3' />)
+                                <input type='text' class='form-control areaCodeInput required_input' name='phoneFirst'
+                                placeholder='999' maxLength='3' size='3' />-
+                                <input type='text' class='form-control phoneInput required_input' placeholder='9999' name='phoneSecond' maxLength='4' size='4' />
+                            </div>
+                            <input type='text' class='form-control email_input required_input' id='Athletic_Director_Email' placeholder='email' name='Athletic_Director_Email' />
+                            <label for='Principal_Name'>*Principal</label>
+                            <input type='text' class='form-control required_input' id='Principal_Name' placeholder='name' name='Principal_Name' />
+                            <div class="container-columns">
+                                (<input type='text' class='form-control areaCodeInput required_input' placeholder='999' name='areaCode' maxLength='3' size='3' />)
+                                <input type='text' class='form-control areaCodeInput required_input' name='phoneFirst'
+                                placeholder='999' maxLength='3' size='3' />-
+                                <input type='text' class='form-control phoneInput required_input' placeholder='9999' name='phoneSecond' maxLength='4' size='4' />
+                            </div>
+                            <input type='text' class='form-control email_input required_input' id='Principal_Email' placeholder='email' name='Principal_Email' />
                         </div>
                     </div>
                 </div>
@@ -256,15 +270,15 @@
                             <input type='text' class='form-control' id='Father_Address' placeholder='street address' name='Father_Address' />
                             <label for='Father_Employer'>Occupation</label>
                             <input type='text' class='form-control' id='Father_Employer' placeholder='employer'  name='Father_Employer' />
-                            <input type='text' class='form-control' id='Father_Job' placeholder='occupation' required='required' name='Father_Job' />
-                            <input type='text' class='form-control' id='Father_Income' placeholder='annual income' required='required' name='Father_Income' />
+                            <input type='text' class='form-control' id='Father_Job' placeholder='occupation' name='Father_Job' />
+                            <input type='text' class='form-control inline-input' id='Father_Income' placeholder='annual income' name='Father_Income' />
                             <label for='Mother_Name'>Mother</label>
                             <input type='text' class='form-control' id='Mother_Name' placeholder='name' name='Mother_Name' />
                             <input type='text' class='form-control' id='Mother_Address' placeholder='street address' name='Mother_Address' />
                             <label for='Mother_Employer'>Occupation</label>
                             <input type='text' class='form-control' id='Mother_Employer' placeholder='employer'  name='Mother_Employer' />
-                            <input type='text' class='form-control' id='Mother_Job' placeholder='occupation' required='required' name='Mother_Job' />
-                            <input type='text' class='form-control' id='Mother_Income' placeholder='annual income' required='required' name='Mother_Income' />
+                            <input type='text' class='form-control' id='Mother_Job' placeholder='occupation' name='Mother_Job' />
+                            <input type='text' class='form-control' id='Mother_Income' placeholder='annual income' name='Mother_Income' />
                         </div>
                         <div class='form-group multi_row'>
                             <div class="variable_input_container" id="Income">
@@ -276,8 +290,8 @@
                         </div>
                         <div class='form-group'>
                             <label for='Total_Income'>
-                                Total Household Income</label>
-                            <input type='text' class='form-control' id='Total_Income' placeholder='income' required='required' name='Total_Income' />
+                                *Total Household Income</label>
+                            <input type='text' class='form-control required_input' id='Total_Income' placeholder='income' name='Total_Income' />
                         </div>
                         <div class='form-group'>
                             <label for='Homeowner'>
@@ -304,17 +318,17 @@
                         <div class='form-group'>
                             <label for='Children_In_College'>
                                 Number of Children in College</label>
-                            <input type='text' class='form-control' id='Children_In_College' required='required' name='Children_In_College' />
+                            <input type='text' class='form-control int_input' id='Children_In_College' name='Children_In_College' />
                         </div>
                         <div class='form-group'>
                             <label for='Children_In_High_School'>
                                 Number of Children in High School</label>
-                            <input type='text' class='form-control' id='Children_In_High_School' name='Children_In_High_School' />
+                            <input type='text' class='form-control int_input' id='Children_In_High_School' name='Children_In_High_School' />
                         </div>
                         <div class='form-group'>
                             <label for='Children_In_Grade_School'>
                                 Number of Children in K-8</label>
-                            <input type='text' class='form-control' id='Children_In_Grade_School' required='required' name='Children_In_Grade_School' />
+                            <input type='text' class='form-control int_input' id='Children_In_Grade_School' name='Children_In_Grade_School' />
                         </div>
                         <div class='form-group multi_row'>
                             <div class="variable_textArea_container" id="Additional_Expense">

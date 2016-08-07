@@ -60,6 +60,11 @@ function validate() {
 		isValid = false;
 		validationDictionary["errors"].push("Please include a number between 1 and 9 for your party size");
 	}
+	var checkRequired = validateRequired();
+	if(!checkRequired) {
+		isValid = false;
+		validationDictionary["errors"].push("Please fill out all required fields");
+	}
 	validationDictionary["valid"] = isValid;
 	return validationDictionary;
 }
@@ -108,6 +113,16 @@ function validateNumberInParty() {
 			isValid = false;
 		}
 		if(value < 1 || value > 9) {
+			isValid = false;
+		}
+	});
+	return isValid;
+}
+
+function validateRequired() {
+	var isValid = true;
+	$('.required_input').each(function() {
+		if($(this).val() == '') {
 			isValid = false;
 		}
 	});
