@@ -39,3 +39,15 @@
 .input-single-char {
 	width: 4em;
 }
+
+.areaCodeInput {
+	width: 6em;
+	margin-right: 2px;
+	display: inline;
+}
+
+.phoneInput {
+	width: 8em;
+	margin-right: 2px;
+	display: inline;
+}

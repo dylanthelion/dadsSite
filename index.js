@@ -95,6 +95,7 @@ app.post('/sendScholarshipForm', function(req, res) {
 				console.log('Message sent: ' + info.response);
 				deleteFile(fullPath);
 			});
+			res.end('{"status" : 200}')
 		});
 	});
 })
@@ -126,6 +127,7 @@ app.post('/createGolfRegistrant', function(req, res) {
 		});
 		uploader.on('end', function() {
 			console.log("done uploading");
+			res.end('{"status" : 200}')
 		});
 })
 

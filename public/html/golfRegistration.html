@@ -100,25 +100,29 @@
                                 <label for='Players'>
                                 Number in Party</label><br>
                                 <div class='input-single-char'>
-                                  <input type='text' class='form-control' id='Players' required='required' name='Players' /><br>
+                                  <input type='text' class='form-control single-digit-input' id='Players' required='required' name='Players' maxLength='1' /><br>
                                 </div>
                             </div>
                             <div class='form-group input-next-line'>
-                              <label for='Phone'>
+                              <label for='areaCode'>
                                 Contact info (please include at least one)</label>
                                 <br>
-                              <label for='Phone'>
-                                Phone</label>
-                              <input type='text' class='form-control' id='Phone' name='Phone' />
+                              <label for='areaCode'>Phone:</label>
+                              <div class="container-columns">
+                                    (<input type='text' class='form-control areaCodeInput' id='areaCode' placeholder='999' name='areaCode' maxLength='3' size='3' />)
+                                    <input type='text' class='form-control areaCodeInput' id='phoneFirst' name='phoneFirst'
+                                    placeholder='999' maxLength='3' size='3' />-
+                                    <input type='text' class='form-control phoneInput' id='phoneSecond' placeholder='9999' name='phoneSecond' maxLength='4' size='4' />
+                              </div>
                             </div>
                             <div class='form-group'>
                               <label for='Email'>
                                 Email</label>
-                              <input type='text' class='form-control' id='Email' name='Email' />
+                              <input type='text' class='form-control email_input' id='Email' name='Email' />
                             </div>
                             <!-- Submit button -->
                             <div class='col-md-12'>
-                              <button type='submit' class='btn btn-primary pull-right' id='btnSubmit'>
+                              <button class='btn btn-primary pull-right' id='btnSubmit'>
                                   Register</button>
                             </div>
                             <!-- end of Submit -->
