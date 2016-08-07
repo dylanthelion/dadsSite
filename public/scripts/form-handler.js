@@ -31,24 +31,37 @@ function writeInput() {
 	file += ".txt";
 	//console.log("write input");
 	$('input').each(function() {
-		outputString += $(this).attr('name');
-		outputString += ": ";
+		if(! $(this).hasClass('partial_input_after')) {
+			outputString += $(this).attr('name');
+			outputString += ": ";
+		}
+		
 		outputString += $(this).val();
-		outputString += "\n";
+		if(! $(this).hasClass('partial_input_before')) {
+			outputString += "\n";
+		}
 	});
 
 	$('select').each(function() {
-		outputString += $(this).attr('name');
-		outputString += ": ";
+		if(! $(this).hasClass('partial_input_after')) {
+			outputString += $(this).attr('name');
+			outputString += ": ";
+		}
 		outputString += $(this).val();
-		outputString += "\n";
+		if(! $(this).hasClass('partial_input_before')) {
+			outputString += "\n";
+		}
 	});
 
 	$('textarea').each(function() {
-		outputString += $(this).attr('name');
-		outputString += ": ";
+		if(! $(this).hasClass('partial_input_after')) {
+			outputString += $(this).attr('name');
+			outputString += ": ";
+		}
 		outputString += $(this).val();
-		outputString += "\n";
+		if(! $(this).hasClass('partial_input_before')) {
+			outputString += "\n";
+		}
 	});
 
 

@@ -79,9 +79,9 @@
                             <label for='name'>
                                 Name*</label>
                                 <div class="container-columns">
-                                    <input type='text' class='form-control tri_column_input required_input' id='firstName' placeholder='first' name='Name' />
-                                    <input type='text' class='form-control tri_column_input required_input' id='middleName' placeholder='middle' name='Name' />
-                                    <input type='text' class='form-control tri_column_input required_input' id='lastName' placeholder='last' name='Name' />
+                                    <input type='text' class='form-control tri_column_input required_input partial_input_before' id='firstName' placeholder='first' name='Name' />
+                                    <input type='text' class='form-control tri_column_input partial_input_before partial_input_after' id='middleName' placeholder='middle' />
+                                    <input type='text' class='form-control tri_column_input required_input partial_input_after' id='lastName' placeholder='last' />
                                 </div>
                         </div>
                         <div class='form-group'>
@@ -111,10 +111,10 @@
                         <div class='form-group input-next-line'>
                               <label for='areaCode'>Phone*</label>
                               <div class="container-columns">
-                                    (<input type='text' class='form-control areaCodeInput required_input' placeholder='999' name='areaCode' maxLength='3' size='3' />)
-                                    <input type='text' class='form-control areaCodeInput required_input' name='phoneFirst'
+                                    (<input type='text' class='form-control areaCodeInput required_input partial_input_before' placeholder='999' name='Phone' maxLength='3' size='3' />)
+                                    <input type='text' class='form-control areaCodeInput required_input partial_input_before partial_input_after' name='phoneFirst'
                                     placeholder='999' maxLength='3' size='3' />-
-                                    <input type='text' class='form-control phoneInput required_input' placeholder='9999' name='phoneSecond' maxLength='4' size='4' />
+                                    <input type='text' class='form-control phoneInput required_input partial_input_after' placeholder='9999' name='phoneSecond' maxLength='4' size='4' />
                               </div>
                             </div>
                         <div class='form-group'>
@@ -231,19 +231,19 @@
                             <label for='Athletic_Director_Name'>*Athletic Director</label>
                             <input type='text' class='form-control required_input' id='Athletic_Director_Name' placeholder='name' name='Athletic_Director_Name' />
                             <div class="container-columns">
-                                (<input type='text' class='form-control areaCodeInput required_input' placeholder='999' name='areaCode' maxLength='3' size='3' />)
-                                <input type='text' class='form-control areaCodeInput required_input' name='phoneFirst'
+                                (<input type='text' class='form-control areaCodeInput required_input partial_input_before' placeholder='999' name='Athletic_Director_Phone' maxLength='3' size='3' />)
+                                <input type='text' class='form-control areaCodeInput required_input partial_input_after partial_input_before' name='phoneFirst'
                                 placeholder='999' maxLength='3' size='3' />-
-                                <input type='text' class='form-control phoneInput required_input' placeholder='9999' name='phoneSecond' maxLength='4' size='4' />
+                                <input type='text' class='form-control phoneInput required_input partial_input_after' placeholder='9999' name='phoneSecond' maxLength='4' size='4' />
                             </div>
                             <input type='text' class='form-control email_input required_input' id='Athletic_Director_Email' placeholder='email' name='Athletic_Director_Email' />
                             <label for='Principal_Name'>*Principal</label>
                             <input type='text' class='form-control required_input' id='Principal_Name' placeholder='name' name='Principal_Name' />
                             <div class="container-columns">
-                                (<input type='text' class='form-control areaCodeInput required_input' placeholder='999' name='areaCode' maxLength='3' size='3' />)
-                                <input type='text' class='form-control areaCodeInput required_input' name='phoneFirst'
+                                (<input type='text' class='form-control areaCodeInput required_input partial_input_before' placeholder='999' name='Principal_Phone' maxLength='3' size='3' />)
+                                <input type='text' class='form-control areaCodeInput required_input partial_input_before partial_input_after' name='phoneFirst'
                                 placeholder='999' maxLength='3' size='3' />-
-                                <input type='text' class='form-control phoneInput required_input' placeholder='9999' name='phoneSecond' maxLength='4' size='4' />
+                                <input type='text' class='form-control phoneInput required_input partial_input_after' placeholder='9999' name='phoneSecond' maxLength='4' size='4' />
                             </div>
                             <input type='text' class='form-control email_input required_input' id='Principal_Email' placeholder='email' name='Principal_Email' />
                         </div>

@@ -23,7 +23,7 @@ function writeInput() {
 
 	var Name = $('#Name').val();
 	var Players = $('#Players').val();
-	var Phone = $('#Phone').val();
+	var Phone = $('#areaCode').val() + $('#phoneFirst').val() + $('#phoneSecond').val();
 	var Email = $('#Email').val();
 
 	$.ajax({
