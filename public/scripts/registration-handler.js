@@ -2,26 +2,14 @@ $(document).ready(function(event) {
 	console.log('Form working');
 	$('#btnSubmit').click(function(event) {
 		event.preventDefault();
-		var isValid = true;
-		// Validation
-		if (isValid) {
+		var valid = isValid();
+		if (valid) {
 			writeInput();
 		}
 	});
 });
 
 function writeInput() {
-	var check = validate();
-	if(!check["valid"]) {
-		var errorString = "";
-		for(var i = 0; i < check["errors"].length; i++) {
-			errorString += check["errors"][i];
-			errorString += "\n";
-		}
-		alert(errorString);
-		return;
-	}
-
 	var Name = $('#Name').val();
 	var Players = $('#Players').val();
 	var Phone = $('#areaCode').val() + $('#phoneFirst').val() + $('#phoneSecond').val();
@@ -44,6 +32,20 @@ function writeInput() {
          alert('error');
       }    
 	});
+}
+
+function isValid() {
+	var check = validate();
+	if(!check["valid"]) {
+		var errorString = "";
+		for(var i = 0; i < check["errors"].length; i++) {
+			errorString += check["errors"][i];
+			errorString += "\n";
+		}
+		alert(errorString);
+		return false;
+	}
+	return true;
 }
 
 function validate() {
