@@ -11,7 +11,6 @@ $(document).ready(function(event) {
 });
 
 function writeInput() {
-	alert('checking');
 	var check = validate();
 	if(!check["valid"]) {
 		var errorString = "";
