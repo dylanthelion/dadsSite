@@ -19,6 +19,7 @@ function writeInput() {
 			errorString += "\n";
 		}
 		alert(errorString);
+		return;
 	}
 
 	var Name = $('#Name').val();

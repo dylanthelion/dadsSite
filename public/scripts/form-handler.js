@@ -31,36 +31,42 @@ function writeInput() {
 	file += ".txt";
 	//console.log("write input");
 	$('input').each(function() {
-		if(! $(this).hasClass('partial_input_after')) {
-			outputString += $(this).attr('name');
-			outputString += ": ";
-		}
-		
-		outputString += $(this).val();
-		if(! $(this).hasClass('partial_input_before')) {
-			outputString += "\n";
+		if(! $(this).val() != '') {
+			if(! $(this).hasClass('partial_input_after')) {
+				outputString += $(this).attr('name');
+				outputString += ": ";
+			}
+			
+			outputString += $(this).val();
+			if(! $(this).hasClass('partial_input_before')) {
+				outputString += "\n";
+			}
 		}
 	});
 
 	$('select').each(function() {
-		if(! $(this).hasClass('partial_input_after')) {
-			outputString += $(this).attr('name');
-			outputString += ": ";
-		}
-		outputString += $(this).val();
-		if(! $(this).hasClass('partial_input_before')) {
-			outputString += "\n";
+		if(! $(this).val() != '') {
+			if(! $(this).hasClass('partial_input_after')) {
+				outputString += $(this).attr('name');
+				outputString += ": ";
+			}
+			outputString += $(this).val();
+			if(! $(this).hasClass('partial_input_before')) {
+				outputString += "\n";
+			}
 		}
 	});
 
 	$('textarea').each(function() {
-		if(! $(this).hasClass('partial_input_after')) {
-			outputString += $(this).attr('name');
-			outputString += ": ";
-		}
-		outputString += $(this).val();
-		if(! $(this).hasClass('partial_input_before')) {
-			outputString += "\n";
+		if(! $(this).val() != '') {
+			if(! $(this).hasClass('partial_input_after')) {
+				outputString += $(this).attr('name');
+				outputString += ": ";
+			}
+			outputString += $(this).val();
+			if(! $(this).hasClass('partial_input_before')) {
+				outputString += "\n";
+			}
 		}
 	});
 
