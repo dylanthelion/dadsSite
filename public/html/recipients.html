@@ -7,12 +7,14 @@
    Scholarship recipients
   </title>
   <script type="text/javascript" src="/scripts/jquery-3.1.0.min.js"></script>
+  <script type="text/javascript" src="/scripts/tabPane.js"></script>
   <link rel="stylesheet" type="text/css" href="/styles/bootstrap.min.css">
   <link type="text/css" rel="stylesheet" href="/styles/site1.css?version=" />
   <link href="/styles/event.css?version=10.0.14" rel="stylesheet" type="text/css" />
   <link rel="stylesheet" type="text/css" href="/styles/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="/styles/bootsnipp.min.css">
-
+  <link rel="stylesheet" type="text/css" href="/styles/profile-circles.css">
+  <link rel="stylesheet" type="text/css" href="/styles/tab-pane-container.css">
   <meta property="og:title" content="Craig Belcher&#39;s Memorial Scholarship Fund" />
   <meta property="og:locality" content="Milwaukee" />
   <meta property="og:region" content="Wisconsin" />
@@ -57,7 +59,7 @@
                     <ul>
                       <li class="current">
                         <ul>
-                          <li class="current">
+                          <li>
                             <a href="/">Home</a>
                           </li>
                           <li>
@@ -69,7 +71,7 @@
                           <li>
                             <a href="/golfRegistration/">Golf Outing</a>
                           </li>
-                          <li>
+                          <li class="current">
                             <a href="/recipients/">Scholarship Recipients</a>
                           </li>
                         </ul>
@@ -82,6 +84,32 @@
                 <div class="main">
                   <div>
                     <h1>Past Recipients</h1>
+
+                    <div class="tab-container">
+                      <ul class="nav nav-tabs">
+                        <li class="active tabSelector" data-selector-name="MartinFlemming"><a href="#tab_a" data-toggle="tab" >Martin Flemming : 2013</a></li>
+                      </ul>
+                      <div class="pane-container">
+                        <div class="tab-content">
+                          <div class="tab-pane active" data-selector-name="MartinFlemming" id="tab_a">
+                            <h4>Martin Flemming</h4>
+                            <div class='profile-pic-container'>
+                              <div class='profile-pic-inner'>
+                                <div>
+                                  <img class='img-circle profile-image-small' src="/assets/Fleming4.jpg">
+                                  <div>
+                                    <span class='label label-default'>Martin</span>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <p>Martin Flemming was a wrestler at Milwaukee Hamilton High School. He graduated in 2013, and was awarded the Craig Belcher Memorial Scholarship. Aftre graduation, Martin was admitted to the University of Dubuque, in Iowa.</p>
+                            <br>
+                            <p>Martin is a committed wrestler and student. He is expected to graduate, with a degree in Criminal Justice, in 2017.</p>
+                          </div>
+                        </div><!-- tab content -->
+                      </div>
+                    </div><!-- end of container -->
                   <!-- Footer -->
                   <div> 
                     <div> 
