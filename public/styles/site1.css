@@ -32,4 +32,13 @@ div.wide div.header-bar ul { margin: 0 auto; }
 .custom-footer .footer-wrapper ul li {display:list-item; font-family:Verdana;}
 .custom-footer .footer-wrapper ul{padding-left:40px;}
 
+/* Banner image */
 
+.banner-image-container {
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+#bannerImage {
+	width: 100%;
+}
