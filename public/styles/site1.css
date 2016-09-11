@@ -23,7 +23,8 @@ div.wide div.header-bar ul { margin: 0 auto; }
 .footer-wrapper{text-align:center; padding:10px 0; font-family:Arial, Verdana,Helvetica,sans-serif;}
 .footer-wrapper p {margin:0; padding:0;}
 .footer-wrapper span{padding:0 2px;}
-.footer-wrapper img.logo{width:124px; height:35px; margin-bottom:10px; background: #fff; padding: 2px 8px; border-radius: 5px;}
+/* Footer image cell background color */
+.footer-wrapper img.logo{width:124px; height:35px; margin-bottom:10px; background: #FFF; padding: 2px 8px; border-radius: 5px;}
 .footer-wrapper ul, .footer-wrapper li{list-style:none; margin:0; padding:0;}
 .footer-wrapper li{display:inline;}
 .footer-wrapper li a{text-decoration:none;}

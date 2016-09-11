@@ -4,6 +4,7 @@ Name: Golf
 */
 
 html { height: 100%; }
+/* Main background image */
 body { height: 100%; background:url("../assets/page-bg.png") #F1ECE6; width: 100%;}
 
 /* Typography
@@ -26,19 +27,22 @@ div.header-bar ul li a:hover { color: #6FA33F; }
 
 
 /* Left nav background */
-div.two-column.left div.main { padding: 10px; margin: 0 0 0 -180px; border-left: 180px solid #D1E5EC; float: left; position: relative; }
+div.two-column.left div.main { padding: 10px; margin: 0 0 0 -180px; border-left: 180px solid #ddfac1; float: left; position: relative; }
 /* left nav */
 div.two-column.left div.sidebar { margin: 0; width: 180px; font-size: 11px; float: left; position: relative; z-index: 20; }
 div.two-column div.navigation ul { list-style-type: none; padding:0; }
 
 /* Left navbar items */
 div.two-column div.navigation ul li a { padding: 7px 10px; background:url(images/side-nav-bg.png) repeat-x 0 0; color: #2F4E57; text-decoration: none; display: block; }
+/* side navbar deselected background color */
 div.two-column div.navigation ul li li a { background: #D1E5EC; color: #242424; border-bottom: 1px solid #77B7CC; font-weight: normal; }
+/* side navbar selected background color */
 div.two-column.left div.navigation ul li li a:hover, div.two-column.left div.navigation ul li li.current a { background: #DDFAC1; color: #242424; }
 
 
 /* Two-column main background */
-div.two-column.left.wide div.middle,  ul.sf-menu.sf-navbar li li.current:hover { background-color: #DDFAC1; }
+div.two-column.left.wide div.middle,  ul.sf-menu.sf-navbar li li.current:hover { background-color: #ddfac1; }
+/* ddfac1 */
 .clearfix:after, .container:after {
   content: "\0020";
   display: block;
