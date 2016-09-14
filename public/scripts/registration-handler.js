@@ -10,7 +10,7 @@ $(document).ready(function(event) {
 });
 
 function writeInput() {
-	var Name = $('#Name').val();
+	var Names = $('#Name1').val() + "\n" + $('#Name2').val() + "\n" + $('#Name3').val() + "\n" + $('#Name4').val();
 	var Players = $('#Players').val();
 	var Phone = $('#areaCode').val() + $('#phoneFirst').val() + $('#phoneSecond').val();
 	var Email = $('#Email').val();
@@ -20,7 +20,7 @@ function writeInput() {
 	  type: 'POST',
 	  dataType : "json",
 	  data: {
-	  	name: Name,
+	  	players: Names,
 	  	teamSize: Players,
 	  	email: Email,
 	  	phone: Phone
