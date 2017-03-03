@@ -17,47 +17,24 @@ function writeInput() {
 	file += "_scholarship_";
 	file += date.toString();
 	file += ".txt";
-	//console.log("write input");
+	
 	$('input').each(function() {
-		if(! $(this).val() != '') {
-			if(! $(this).hasClass('partial_input_after')) {
-				outputString += $(this).attr('name');
-				outputString += ": ";
-			}
-			
-			outputString += $(this).val();
-			if(! $(this).hasClass('partial_input_before')) {
-				outputString += "\n";
-			}
+		if($(this).val() != '') {
+			outputString += addInput($(this), outputString);
 		}
 	});
 
 	$('select').each(function() {
-		if(! $(this).val() != '') {
-			if(! $(this).hasClass('partial_input_after')) {
-				outputString += $(this).attr('name');
-				outputString += ": ";
-			}
-			outputString += $(this).val();
-			if(! $(this).hasClass('partial_input_before')) {
-				outputString += "\n";
-			}
+		if($(this).val() != '') {
+			outputString += addInput($(this), outputString);
 		}
 	});
 
 	$('textarea').each(function() {
-		if(! $(this).val() != '') {
-			if(! $(this).hasClass('partial_input_after')) {
-				outputString += $(this).attr('name');
-				outputString += ": ";
-			}
-			outputString += $(this).val();
-			if(! $(this).hasClass('partial_input_before')) {
-				outputString += "\n";
-			}
+		if($(this).val() != '') {
+			outputString += addInput($(this), outputString);
 		}
 	});
-
 
 	$.ajax({
 	  url : '/sendScholarshipForm/',
@@ -192,4 +169,50 @@ function validateRequired() {
 		}
 	});
 	return isValid;
+}
+
+function addSoloInput(element) {
+	var outputString = "";
+	outputString += element.attr('name');
+	outputString += ": ";
+	outputString += element.val();
+	outputString += "\n";
+	return outputString;
+}
+
+function addInputBefore(element) {
+	var outputString = "";
+	outputString += element.attr('name');
+	outputString += ": ";
+	outputString += element.val();
+	return outputString;
+}
+
+function addInputAfter(element) {
+	var outputString = "";
+	outputString += " ";
+	outputString += element.val();
+	outputString += "\n";
+	return outputString;
+}
+
+function addInputMiddle(element) {
+	var outputString = "";
+	outputString += " ";
+	outputString += element.val();
+	return outputString;
+}
+
+function addInput(element) {
+	var outputString = "";
+	if(element.hasClass('partial_input_after')) {
+		outputString += addInputAfter(element);
+	} else if(element.hasClass('partial_input_before'))  {
+		outputString += addInputBefore(element);
+	} else if(element.hasClass('partial_input_middle'))  {
+		outputString += addInputMiddle(element);
+	} else {
+		outputString += addSoloInput(element);
+	}
+	return outputString;
 }
