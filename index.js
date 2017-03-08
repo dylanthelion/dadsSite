@@ -142,7 +142,7 @@ function deleteFile(fullPath) {
 	   if (err) {
 	       return console.error(err);
 	   }
-	   console.log("File deleted successfully!");
+	   logger.log("info", "File deleted successfully!");
 	});
 }
 
