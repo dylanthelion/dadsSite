@@ -9,6 +9,12 @@ var fs = require('fs');
 var env = require('./serverVars.json');
 var nodemailer = require('nodemailer');
 var htmlPath = "/public/html/";
+var winston = require('winston');
+var logger = new (winston.Logger)({
+    transports: [
+      new (winston.transports.File)({ filename: env.logFile })
+    ]
+ });
 
 var transporter = nodemailer.createTransport({
     service:'Gmail',
@@ -51,7 +57,7 @@ app.get('/recipients', function (req, res) {
 })
 
 app.post('/sendScholarshipForm', function(req, res) {
-	console.log(req.body.message);
+	logger.log('info', req.body.message);
 	var filePath = "public/applications/";
 	var fullPath = filePath + req.body.filename;
 	var emailtext = "File name: " + filePath + "\nLink: " + env.IAM_URL;
@@ -101,7 +107,7 @@ app.post('/sendScholarshipForm', function(req, res) {
 })
 
 app.post('/createGolfRegistrant', function(req, res) {
-
+	logger.log('info', req.body.message);
 	var configFile = fs.readFileSync('registrants.json');
 	var config = JSON.parse(configFile);
 	config.push(req.body);
